@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate} from 'react-router-dom'
 import axios from 'axios';
 import CustomSelect from './customSelect';
 import CustomFilter from './CustomFilter';
 import '../App.css';
 import Atropos from 'atropos/react';
 
+
 export const StoreCatalog = () => {
   const [products, setProducts] = useState([]);
   const [sortOption, setSortOption] = useState('');
   const [filterCategory, setFilterCategory] = useState('');
-
+  const navigate= useNavigate() 
 
   const fetchProducts = () => {
     axios
@@ -68,21 +70,23 @@ export const StoreCatalog = () => {
       
       <div className="store-grid">
       {filteredProducts.map((p) => (
-        <Atropos key={p.id} className="my-atropos" shadow={false} highlight={false}
-          activeOffset={40}
-          rotateXMax={10}
-          rotateYMax={10}>
+        
 
 
-          <div className="store-card">
+          
+            <div className="store-card" key={p.id} onClick={()=>{
+              navigate('/product/'+p.id)
+            }}>
             <img src={p.image} alt={p.title} data-atropos-offset="5" />
             <h4 data-atropos-offset="10">{p.title}</h4>
             <p className="price" data-atropos-offset="7">${p.price}</p>
             <p className="category" data-atropos-offset="3">{p.category}</p>
           </div>
+        
+          
 
 
-        </Atropos>
+       
       ))}
     </div>
 

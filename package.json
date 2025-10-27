@@ -1,6 +1,6 @@
 {
   "name": "catalog",
-  "homepage": "https://emmanuelfame.github.io/catalog", 
+  "homepage": "https://emmanuelfame.github.io/catalog",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,7 +16,8 @@
     "atropos": "^2.0.2",
     "axios": "^1.12.2",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
