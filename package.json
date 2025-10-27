@@ -1,6 +1,6 @@
 {
   "name": "catalog",
-   "homepage": "https://emmanuelfame.github.io/catalog", 
+  "homepage": "https://emmanuelfame.github.io/catalog", 
   "private": true,
   "version": "0.0.0",
   "type": "module",
