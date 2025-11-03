@@ -14,11 +14,14 @@ export const StoreCatalog = () => {
   const navigate= useNavigate() 
 
   const fetchProducts = () => {
+    
     axios
       .get('https://fakestoreapi.com/products')
       .then((res) => setProducts(res.data))
       .catch(console.error);
   };
+
+  
 
   useEffect(() => {
     fetchProducts();
